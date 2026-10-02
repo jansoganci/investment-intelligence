@@ -1,0 +1,100 @@
+{
+  "cik": 9999991,
+  "entityName": "Synthetic Operating Co",
+  "facts": {
+    "us-gaap": {
+      "CashAndCashEquivalentsAtCarryingValue": {
+        "units": {
+          "USD": [
+            {
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "val": 280000000,
+              "end": "2025-12-31"
+            },
+            {
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "val": 250000000,
+              "end": "2024-12-31"
+            }
+          ]
+        }
+      },
+      "Assets": {
+        "units": {
+          "USD": [
+            {
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "val": 2100000000
+            },
+            {
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "val": 2000000000
+            }
+          ]
+        }
+      },
+      "StockholdersEquity": {
+        "units": {
+          "USD": [
+            {
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "val": 1150000000
+            },
+            {
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "val": 1100000000
+            }
+          ]
+        }
+      },
+      "LongTermDebt": {
+        "units": {
+          "USD": [
+            {
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "val": 340000000
+            }
+          ]
+        }
+      },
+      "Revenues": {
+        "units": {
+          "USD": [
+            {
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "val": 1100000000
+            }
+          ]
+        }
+      },
+      "SalesRevenueNet": {
+        "units": {
+          "USD": [
+            {
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "val": 1095000000
+            }
+          ]
+        }
+      }
+    }
+  }
+}

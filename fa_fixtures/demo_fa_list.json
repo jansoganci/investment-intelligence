@@ -1,0 +1,14 @@
+{
+  "companies": [
+    {
+      "ticker": "SYNTH_OPCO",
+      "name": "Synthetic Operating Co",
+      "synthetic_demo": true,
+      "gate0_class": "operating",
+      "notes": "FIXTURE ONLY — never copy into production FA list as a real ticker"
+    }
+  ],
+  "synthetic_demo": true,
+  "note": "FIXTURE ONLY — synthetic tickers. Research Coverage ≠ FA List. Do not invent production real tickers here.",
+  "updated_at": "2026-09-14T00:00:00Z"
+}
