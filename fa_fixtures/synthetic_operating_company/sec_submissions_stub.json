@@ -1,0 +1,27 @@
+{
+  "cik": "0009999991",
+  "name": "Synthetic Operating Co",
+  "tickers": [
+    "SYNTH_OPCO"
+  ],
+  "filings": {
+    "recent": {
+      "accessionNumber": [
+        "0009999991-26-000001",
+        "0009999991-25-000001"
+      ],
+      "form": [
+        "10-K",
+        "10-K"
+      ],
+      "filingDate": [
+        "2026-02-15",
+        "2025-02-15"
+      ],
+      "primaryDocument": [
+        "synth-20251231.htm",
+        "synth-20241231.htm"
+      ]
+    }
+  }
+}

@@ -1,0 +1,403 @@
+{
+  "items": [
+    {
+      "id": "src_fix01a",
+      "source_system": "json_fixture",
+      "source_url": "https://news.example/copper-capex-a",
+      "title": "US miner announces major copper CAPEX completion",
+      "published_at": "2026-09-01T10:00:00Z",
+      "raw_content": "FREEPORT-DEMO (FCX.DEMO) said it completed a major CAPEX project at its copper mine. New capacity is coming online and management guided higher 2027 copper output. Free cash flow may improve as the investment cycle ends.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "event_A_outlet1"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "FREEPORT-DEMO (FCX.DEMO) said it completed a major CAPEX project at its copper mine. New capacity is coming online and management guided higher 2027 copper output. Free cash flow may improve as the investment cycle ends.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix01b",
+      "source_system": "json_fixture",
+      "source_url": "https://other.example/copper-capex-b",
+      "title": "Same story: copper CAPEX finished at Freeport-demo",
+      "published_at": "2026-09-01T14:00:00Z",
+      "raw_content": "FREEPORT-DEMO (FCX.DEMO) completed a major CAPEX project at its copper mine. New capacity coming online; management guided higher 2027 copper output. FCF may improve as CAPEX cycle ends. Wire rewrite of same event.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "event_A_outlet2_same_event"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "FREEPORT-DEMO (FCX.DEMO) completed a major CAPEX project at its copper mine. New capacity coming online; management guided higher 2027 copper output. FCF may improve as CAPEX cycle ends. Wire rewrite of same event.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix02",
+      "source_system": "json_fixture",
+      "source_url": "https://news.example/copper-capex-a?utm_source=tw",
+      "title": "US miner announces major copper CAPEX completion",
+      "published_at": "2026-09-01T10:00:00Z",
+      "raw_content": "FREEPORT-DEMO (FCX.DEMO) said it completed a major CAPEX project at its copper mine. New capacity is coming online and management guided higher 2027 copper output. Free cash flow may improve as the investment cycle ends.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "duplicate_url_tracking"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "FREEPORT-DEMO (FCX.DEMO) said it completed a major CAPEX project at its copper mine. New capacity is coming online and management guided higher 2027 copper output. Free cash flow may improve as the investment cycle ends.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix03",
+      "source_system": "json_fixture",
+      "source_url": "https://mirror.example/exact-copy",
+      "title": "Copy paste same body",
+      "published_at": "2026-09-01T11:00:00Z",
+      "raw_content": "FREEPORT-DEMO (FCX.DEMO) said it completed a major CAPEX project at its copper mine. New capacity is coming online and management guided higher 2027 copper output. Free cash flow may improve as the investment cycle ends.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "duplicate_content_hash"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "FREEPORT-DEMO (FCX.DEMO) said it completed a major CAPEX project at its copper mine. New capacity is coming online and management guided higher 2027 copper output. Free cash flow may improve as the investment cycle ends.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix04",
+      "source_system": "json_fixture",
+      "source_url": "https://news.example/fcx-safety",
+      "title": "FCX.DEMO reports minor site incident",
+      "published_at": "2026-09-05T09:00:00Z",
+      "raw_content": "FREEPORT-DEMO (FCX.DEMO) reported a minor operational safety incident with no production impact. Routine corporate announcement.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "same_company_different_event_low"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "FREEPORT-DEMO (FCX.DEMO) reported a minor operational safety incident with no production impact. Routine corporate announcement.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix05",
+      "source_system": "json_fixture",
+      "source_url": "https://news.example/copper-price",
+      "title": "Copper prices rise on China demand signals",
+      "published_at": "2026-09-06T08:00:00Z",
+      "raw_content": "Copper prices rose after industry reports of stronger China demand. Commodity development may affect miners including FCX.DEMO via metal price exposure.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "commodity_plus_company"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "Copper prices rose after industry reports of stronger China demand. Commodity development may affect miners including FCX.DEMO via metal price exposure.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix06",
+      "source_system": "json_fixture",
+      "source_url": "https://news.example/cn-ev-policy",
+      "title": "China EV policy discussion may lift US battery materials names",
+      "published_at": "2026-09-07T07:00:00Z",
+      "raw_content": "Chinese policymakers discussed early EV subsidy adjustments. Analysts say this could eventually support US-listed ALB.DEMO (Albemarle-Demo) lithium demand, but policy is early-stage.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "china_event_us_equity_relevance"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "Chinese policymakers discussed early EV subsidy adjustments. Analysts say this could eventually support US-listed ALB.DEMO (Albemarle-Demo) lithium demand, but policy is early-stage.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix07",
+      "source_system": "json_fixture",
+      "source_url": "https://news.example/guidance",
+      "title": "NVDA.DEMO raises full-year revenue guidance",
+      "published_at": "2026-09-08T16:00:00Z",
+      "raw_content": "NVIDIA-DEMO (NVDA.DEMO) raised its full-year revenue guidance citing data-center demand. Company guidance, not an analyst estimate.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "company_guidance"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "NVIDIA-DEMO (NVDA.DEMO) raised its full-year revenue guidance citing data-center demand. Company guidance, not an analyst estimate.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix08",
+      "source_system": "json_fixture",
+      "source_url": "https://news.example/analyst",
+      "title": "Broker raises NVDA.DEMO target",
+      "published_at": "2026-09-08T18:00:00Z",
+      "raw_content": "A sell-side analyst estimated NVDA.DEMO could beat next quarter and raised the price target. This is an analyst estimate / opinion, not company guidance.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "analyst_estimate"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "A sell-side analyst estimated NVDA.DEMO could beat next quarter and raised the price target. This is an analyst estimate / opinion, not company guidance.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix09",
+      "source_system": "json_fixture",
+      "source_url": "https://news.example/opinion",
+      "title": "Why I love semis forever",
+      "published_at": "2026-09-09T12:00:00Z",
+      "raw_content": "Opinion column: semiconductors will always win. No new evidence, no figures, no company announcement.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "pure_opinion"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "Opinion column: semiconductors will always win. No new evidence, no figures, no company announcement.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix10",
+      "source_system": "json_fixture",
+      "source_url": "https://news.example/ambiguous",
+      "title": "Results look strong for DEMOCO",
+      "published_at": "2026-09-09T15:00:00Z",
+      "raw_content": "DEMOCO numbers look strong according to sources. Unclear whether figures are actual reported results or forward guidance or analyst forecasts. Units and period not specified.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "guidance_vs_estimate_ambiguity"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "DEMOCO numbers look strong according to sources. Unclear whether figures are actual reported results or forward guidance or analyst forecasts. Units and period not specified.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix11",
+      "source_system": "json_fixture",
+      "source_url": "https://news.example/usdtry",
+      "title": "USD/TRY volatility note",
+      "published_at": "2026-09-10T09:00:00Z",
+      "raw_content": "USD/TRY moved sharply in session trading. FX development for intelligence only; not an equity recommendation.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "fx"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "USD/TRY moved sharply in session trading. FX development for intelligence only; not an equity recommendation.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix12",
+      "source_system": "json_fixture",
+      "source_url": "https://news.example/semis-sector",
+      "title": "Global semiconductor CAPEX cycle update",
+      "published_at": "2026-09-10T11:00:00Z",
+      "raw_content": "Industry association reports semiconductor manufacturers are entering a new CAPEX cycle. Sector theme; weak single-name company tie.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "sector_theme_weak_company"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "Industry association reports semiconductor manufacturers are entering a new CAPEX cycle. Sector theme; weak single-name company tie.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix13",
+      "source_system": "json_fixture",
+      "source_url": "https://news.example/newco-ipo-rumor",
+      "title": "Newco-Demo explores US listing after capacity build",
+      "published_at": "2026-09-11T10:00:00Z",
+      "raw_content": "NEWCO-DEMO, a private battery materials firm, completed a major capacity expansion and is exploring a US listing. Genuinely new research idea for monitoring; not in any tracked list.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "new_research_idea"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "NEWCO-DEMO, a private battery materials firm, completed a major capacity expansion and is exploring a US listing. Genuinely new research idea for monitoring; not in any tracked list.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix14",
+      "source_system": "json_fixture",
+      "source_url": "https://news.example/tracked-update",
+      "title": "FCX.DEMO customer signs long-term offtake",
+      "published_at": "2026-09-11T13:00:00Z",
+      "raw_content": "FREEPORT-DEMO (FCX.DEMO) signed a major long-term customer offtake agreement for copper concentrate. Material customer development for a name that fixtures treat as demo-tracked.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "tracked_company_update"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "FREEPORT-DEMO (FCX.DEMO) signed a major long-term customer offtake agreement for copper concentrate. Material customer development for a name that fixtures treat as demo-tracked.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix15",
+      "source_system": "json_fixture",
+      "source_url": null,
+      "title": "Incomplete blurb",
+      "published_at": null,
+      "raw_content": "Something happened somewhere.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "low_quality_unresolved"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "Something happened somewhere.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix16",
+      "source_system": "json_fixture",
+      "source_url": "https://haber.ornek/bakir",
+      "title": "Çin bakır talebi artıyor",
+      "published_at": "2026-09-12T08:00:00Z",
+      "raw_content": "Çin'de sanayi bakır talebinin arttığına dair sektör raporları yayımlandı. Bakır fiyatları ve madencilik şirketleri için önemli bir talep sinyali olabilir. Bu metin Türkçe kaynak örneğidir; çeviri yapılmadan saklanmalıdır.",
+      "language": "tr",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "turkish_commodity"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "Çin'de sanayi bakır talebinin arttığına dair sektör raporları yayımlandı. Bakır fiyatları ve madencilik şirketleri için önemli bir talep sinyali olabilir. Bu metin Türkçe kaynak örneğidir; çeviri yapılmadan saklanmalıdır.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix17",
+      "source_system": "json_fixture",
+      "source_url": "https://wire.example/republish-fcx",
+      "title": "Wire: Freeport-demo CAPEX complete",
+      "published_at": "2026-09-01T20:00:00Z",
+      "raw_content": "FREEPORT-DEMO (FCX.DEMO) said it completed a major CAPEX project at its copper mine. New capacity is coming online and management guided higher 2027 copper output. Free cash flow may improve as the investment cycle ends.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "republished_wire_dup_hash"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "FREEPORT-DEMO (FCX.DEMO) said it completed a major CAPEX project at its copper mine. New capacity is coming online and management guided higher 2027 copper output. Free cash flow may improve as the investment cycle ends.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    },
+    {
+      "id": "src_fix18",
+      "source_system": "json_fixture",
+      "source_url": "https://news.example/ma-rumor",
+      "title": "Rumor: DEMOCO may acquire a rival",
+      "published_at": "2026-09-12T17:00:00Z",
+      "raw_content": "Unconfirmed rumor that DEMOCO might acquire a rival. No company confirmation. Treat as opinion/rumor not FACT.",
+      "language": "en",
+      "adapter_meta": {
+        "synthetic_demo": true,
+        "scenario": "ma_rumor_not_fact"
+      },
+      "received_at": "2026-09-13T12:00:00Z",
+      "cleaned_content": "Unconfirmed rumor that DEMOCO might acquire a rival. No company confirmation. Treat as opinion/rumor not FACT.",
+      "processing_status": "received",
+      "related_event_ids": [],
+      "error": null,
+      "created_at": "2026-09-13T12:00:00Z",
+      "updated_at": "2026-09-13T12:00:00Z",
+      "content_hash": null
+    }
+  ]
+}

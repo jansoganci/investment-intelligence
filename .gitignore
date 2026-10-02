@@ -1,0 +1,15 @@
+# Data / runtime (not source of record for GitHub)
+fa_data/
+ri_data/
+audit/
+.pytest_cache/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store

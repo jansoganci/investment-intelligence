@@ -1,0 +1,16 @@
+{
+  "notes": "Soft expectations for dry-run validation",
+  "must_skip_dup_ids": [
+    "src_fix02",
+    "src_fix03",
+    "src_fix17"
+  ],
+  "should_cluster_together": [
+    [
+      "src_fix01a",
+      "src_fix01b"
+    ]
+  ],
+  "must_keep_turkish_untranslated_id": "src_fix16",
+  "synthetic_demo_required": true
+}

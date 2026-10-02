@@ -1,0 +1,13 @@
+{
+  "companies": [
+    {
+      "id": "ent_fcx_demo",
+      "ticker": "FCX.DEMO",
+      "name": "Freeport-Demo",
+      "synthetic_demo": true,
+      "kind": "company"
+    }
+  ],
+  "note": "FIXTURE ONLY — never copy into production tracked_companies.json",
+  "updated_at": "2026-09-13T12:00:00Z"
+}

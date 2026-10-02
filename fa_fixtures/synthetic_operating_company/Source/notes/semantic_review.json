@@ -1,0 +1,16 @@
+{
+  "covenants_notes": "No covenant breach disclosed in fixture notes.",
+  "going_concern_language": false,
+  "going_concern_excerpt": null,
+  "severe_solvency_language": false,
+  "liquidity_mdna_flags": [],
+  "leverage_optional_vs_required": "optional",
+  "near_term_liquidity_failure_credible": false,
+  "near_term_liquidity_notes": null,
+  "off_balance_commitments_notes": "Purchase obligations modest per fixture note.",
+  "restricted_cash_notes": "Restricted cash ~$20\u201325m vs headline cash \u2014 disclosed, not dominant.",
+  "undrawn_facilities_notes": "Undrawn revolver $200m disclosed in fixture Normalized field.",
+  "maturity_notes": "Maturities staggered Y1\u2013Y5+ in fixture buckets.",
+  "other_flags": [],
+  "review_source": "fixture"
+}
