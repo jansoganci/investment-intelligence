@@ -956,6 +956,43 @@ def map_companyfacts_to_period(
                 "change_in_payables_cf: NULL — MAPPING_AMBIGUOUS mixed AP+accrued CF"
             )
 
+    # Convertible-only issuers (e.g. NET) file no LongTermDebt* / ST borrowings tags.
+    # Fallback only when every regular debt field is null: issuers that report
+    # LongTermDebt* plus a ConvertibleDebt* breakdown would otherwise double count.
+    _regular_debt_fields = ("total_debt", "long_term_debt", "short_term_debt", "current_portion_ltd")
+    if all(doc["fields"].get(f) is None for f in _regular_debt_fields):
+        for target, conv_tag in (
+            ("long_term_debt", "ConvertibleDebtNoncurrent"),
+            ("short_term_debt", "ConvertibleDebtCurrent"),
+        ):
+            conv_val, conv_chosen, _conv_cands, _, _conv_row = _pick_fact_value(
+                gaap,
+                [conv_tag],
+                fy=fiscal_year,
+                fp=fp if period_type == "FY" else fiscal_period,
+                period_end=period_end,
+                accession=accession,
+            )
+            if conv_val is None:
+                continue
+            note = (
+                f"mapped from us-gaap:{conv_chosen} — convertible notes carrying amount; "
+                "issuer files no LongTermDebt* / ST borrowings tags (SD-W2-A1 perimeter)"
+            )
+            attach_field_with_lineage(
+                doc,
+                target,
+                conv_val,
+                source_kind="sec_companyfacts",
+                source_ref=f"us-gaap:{conv_chosen}",
+                source_id=accession,
+                notes=note,
+                uncertain=False,
+                review_status="pending",
+                reviewed_by="machine_extracted",
+            )
+            review_notes.append(f"{target}: convertible fallback from {conv_chosen}")
+
     # CFS-signed aggregate WC change: IncreaseDecreaseInOperatingCapital is BS-increase signed;
     # CFS net change in operating assets/liabilities uses the opposite sign.
     inc_op = doc["fields"].get("increase_decrease_in_operating_capital")

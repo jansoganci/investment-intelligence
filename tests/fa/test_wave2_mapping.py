@@ -309,3 +309,64 @@ def test_w2_stage6_metrics_propagates_client_funds_flag():
     # IC excludes client funds 6000
     # TA 40200 - cash 2000 - client 6000 - nibol 1000 = 31200 (approx last row)
     assert dual["ic_inclusive"] == 40_200 - 2_000 - 6_000 - 1_000
+
+
+# ---------------------------------------------------------------------------
+# A1 — convertible-only issuers (NET class)
+# ---------------------------------------------------------------------------
+
+
+def _companyfacts(usd_tags: dict[str, int]) -> dict:
+    def _row(val):
+        return {"fy": 2025, "fp": "FY", "form": "10-K", "end": "2025-12-31", "val": val}
+
+    return {
+        "cik": 1477333,
+        "entityName": "Convertible-only issuer",
+        "facts": {"us-gaap": {t: {"units": {"USD": [_row(v)]}} for t, v in usd_tags.items()}},
+    }
+
+
+def test_w2_a1_convertible_only_issuer_maps_debt_and_ev():
+    from fa.map_companyfacts import map_companyfacts_to_period
+    from fa.stage8.calc import build_ev_equity_bridge, extract_cs_from_period
+
+    doc = map_companyfacts_to_period(
+        _companyfacts(
+            {
+                "ConvertibleDebtNoncurrent": 1_974_120_000,
+                "ConvertibleDebtCurrent": 1_291_281_000,
+                "CashAndCashEquivalentsAtCarryingValue": 1_000_000_000,
+            }
+        ),
+        ticker="NETX",
+        period_key="FY2025",
+        fiscal_year=2025,
+    )
+    assert doc["fields"]["long_term_debt"] == 1_974_120_000
+    assert doc["fields"]["short_term_debt"] == 1_291_281_000
+
+    cs = extract_cs_from_period(doc)
+    cs["shares_diluted_weighted"] = 348_421_000
+    bridge = build_ev_equity_bridge(share_price=100.0, cs=cs)
+    assert bridge["gross_debt"] == 3_265_401_000
+    assert bridge["enterprise_value"] is not None
+
+
+def test_w2_a1_convertible_not_used_when_regular_debt_tags_present():
+    from fa.map_companyfacts import map_companyfacts_to_period
+
+    doc = map_companyfacts_to_period(
+        _companyfacts(
+            {
+                "LongTermDebtNoncurrent": 5_000_000_000,
+                "ConvertibleDebtNoncurrent": 1_000_000_000,
+                "ConvertibleDebtCurrent": 500_000_000,
+            }
+        ),
+        ticker="MIXD",
+        period_key="FY2025",
+        fiscal_year=2025,
+    )
+    assert doc["fields"]["long_term_debt"] == 5_000_000_000
+    assert doc["fields"].get("short_term_debt") is None
